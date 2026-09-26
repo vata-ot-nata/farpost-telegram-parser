@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Farpost - Telegram",
+  "version": "1.1",
+  "description": "Автоматически отслеживает появление новых товаров",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "alarms",
+    "proxy",
+    "webRequest",
+    "webRequestAuthProvider"
+  ],
+  "host_permissions": ["https://www.farpost.ru/*", "https://api.telegram.org/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.farpost.ru/*", "https://api.telegram.org/*"],
+      "js": ["index.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

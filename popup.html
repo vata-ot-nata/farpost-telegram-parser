@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Farpost Telegram</title>
+  <style>
+    body { font-family: sans-serif; padding: 10px; width: 260px; }
+    label { display: block; margin-top: 10px; font-size: 13px; }
+    input, button, select { width: 100%; margin-top: 5px; box-sizing: border-box; }
+    hr { margin-top: 16px; margin-bottom: 8px; border: none; border-top: 1px solid #ddd; }
+    h3, h4 { margin-bottom: 4px; }
+    .row { display: flex; gap: 6px; }
+    .row > div { flex: 1; }
+  </style>
+</head>
+<body>
+  <h3>Farpost - Telegram</h3>
+
+  <label>Состояние вкладки:</label>
+  <button id="toggleState">Загрузка...</button>
+
+  <label>Bot ID:</label>
+  <input type="text" id="botId">
+
+  <label>Chat ID:</label>
+  <input type="text" id="chatId">
+
+  <label>Время начала работы:</label>
+  <input type="time" id="startTime">
+
+  <label>Время конца работы:</label>
+  <input type="time" id="endTime">
+
+  <button id="checkData">Проверить данные</button>
+  <button id="saveSettings">Сохранить</button>
+
+  <hr>
+  <h4>Прокси (только для api.telegram.org)</h4>
+
+  <label>
+    <input type="checkbox" id="proxyEnabled" style="width:auto; display:inline-block; margin-right:6px;">
+    Включить прокси
+  </label>
+
+  <label>Тип:</label>
+  <select id="proxyType">
+    <option value="socks5">SOCKS5</option>
+    <option value="http">HTTP</option>
+  </select>
+
+  <div class="row">
+    <div>
+      <label>Хост:</label>
+      <input type="text" id="proxyHost" placeholder="1.2.3.4">
+    </div>
+    <div style="max-width:80px;">
+      <label>Порт:</label>
+      <input type="text" id="proxyPort" placeholder="1080">
+    </div>
+  </div>
+
+  <label>Логин:</label>
+  <input type="text" id="proxyUser">
+
+  <label>Пароль:</label>
+  <input type="password" id="proxyPass">
+
+  <button id="saveProxy">Сохранить прокси</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

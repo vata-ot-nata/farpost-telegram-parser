@@ -38,4 +38,5 @@ To use the extension, follow these instructions:
 ### Final steps
 1. Open the Farpost subscriptions page.  
 2. In the `"Tab status"` (`"Состояние вкладки"`) field, click it so that the status changes to `"Enabled"` (`"ВКЛ"`).  
-3. Done!
+
+✅ Done! When new listings appear, you will receive a message on Telegram.

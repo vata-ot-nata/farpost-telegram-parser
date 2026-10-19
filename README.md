@@ -1,4 +1,5 @@
 # Farpost-Telegram Parser
+[[Версия на русском языке]](README.ru.md)  
 A Chrome extension that automatically refreshes the Farpost page and sends a Telegram message if a new listing appears.  
 Works only on Subscriptions pages ("Подписки") with  new listings from, sorted by date.
 
